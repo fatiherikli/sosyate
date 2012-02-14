@@ -1,0 +1,5 @@
+<%= form_tag("profiles", :method => "POST") do %>
+     <%= label_tag(:username, "Twitter Username:") %>
+     <%= text_field_tag(:username) %>
+     <%= submit_tag("Submit") %>
+<% end %>
