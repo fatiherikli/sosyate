@@ -1,7 +1,5 @@
 == sosyate.com source code
-
-   edit config/database.yaml and;
-
+edit config/database.yaml and;
    bundle install
    rake db:migrate
    rails server
