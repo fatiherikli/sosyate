@@ -15,6 +15,13 @@
 </head>
 <body>
 
+
+<% if !flash[:notice].blank? %>
+<div class="container_16">
+<div class='grid_15' style='padding:20px; font-size:20px; color:white; background:#f03d27; margin-bottom:20px;'><%= flash[:notice] %></div>
+</div>
+<% end %>
+
 <div id="container" class="container_16">
 
   <div class="grid_4 omega">

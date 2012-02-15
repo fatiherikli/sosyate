@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class ProfilesController < ApplicationController
 
   def show
@@ -13,9 +14,15 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     profile = Profile.find_or_create_by_username(params[:username])
-    profile.update_profile
-    profile.save
-    redirect_to profile
+    begin      
+      profile.update_profile      
+    rescue => e
+      flash[:notice] = "aga cinayet var: #{e.message}"
+      redirect_to "/"
+    else
+      profile.save
+      redirect_to profile
+    end
   end
 
 end
