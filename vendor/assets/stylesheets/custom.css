@@ -1,10 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,latin-ext);
 
+body {
+   font-family: 'Ubuntu', sans-serif;
+}
 
 h1#motto {
-    margin:  49px 0px 0px 0px;
-    padding:  3px;
+    margin: 60px 0px 0px 0px;
+    padding: 7px 3px 3px 15px;
     background: black;
     color: white;
-    height: 34px;
+    height: 30px;
     font-weight: normal;
+    background: url('/static/img/zirilti.png') no-repeat center left black;
+    font-size: 21px;
 }
+
+
+.user .quote {
+    height:73px;
+    background: url('/static/img/quote.png') no-repeat top center black ;
+    font-size: 13px;
+    margin-top: 30px;
+    padding:9px 10px 0px 10px;
+}
+
+.user .quote span {
+    color: white;
+    display:block; float:left; padding: 3px 5px 5px 5px;
+
+}
+
+.user .description {
+    float:left;
+    margin-top: -10px;
+    margin-left: 10px;
+     width: 180px;
+}
+.user .description a {
+    text-decoration: none; color: #394575;
+}
+.user .description span {
+    color: #999999;
+    font-size: 13px;
+}
+.user .picture {
+    float:left; margin-top: -10px;
+    margin-left: 20px;
+
+}
+.hero {
+    font-size: 20px;
+    color: #999999;
+    margin: 10px 10px 10px 0px;
+}
+
+#search label {
+    font-size: 23px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+#search #username {
+    height: 40px;
+    border: 2px solid #cccccc; padding:  0px 0px 0px 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+#search #submit {
+    height: 44px;
+    font-size: 20px;
+    background:  black;
+    color: white;
+    border:  none;
+    margin-left: -5px;
+   width: 70px;
+}
+
+h3 { margin:10px 0px -20px 0px; padding: 5px; font-size: 19px;
+font-weight: normal;}

@@ -1,5 +1,6 @@
-<%= form_tag("profiles", :method => "POST") do %>
-     <%= label_tag(:username, "Twitter Username:") %>
-     <%= text_field_tag(:username) %>
-     <%= submit_tag("Submit") %>
-<% end %>
+<div class="hero">
+Sosyal medya üzerindeki kullandığınız kelimelerin analizini yapmak ister miydiniz ?
+hemen deneyin. Çok kolay ve çok eğlenceli :)
+</div>
+
+<%= render :template => 'profiles/form' %>

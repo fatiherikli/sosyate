@@ -5,7 +5,11 @@ class Profile < ActiveRecord::Base
 
   # get keywords as array
   def get_keywords
-    keywords.split(",")
+      if keywords.nil?
+        []
+      else
+        keywords.split(",")
+      end
   end
 
   # twitter url
@@ -16,7 +20,7 @@ class Profile < ActiveRecord::Base
   # update keywords and profile
   def update_profile
       user = Twitter.user(username)
-      timeline = Twitter.user_timeline(:count=>200, :user=>username)
+      timeline = Twitter.user_timeline(:count=>100, :user=>username)
       words = timeline.map{|item| item.text.split}.flatten
       words.select!{|item|
           !item.include? '@' and

@@ -17,11 +17,46 @@
 
 <div id="container" class="container_16">
 
+  <div class="grid_4 omega">
+    <a href="/"><img src="/static/img/logo.png" alt=""></a>
+  </div>
+  <div class="grid_12 alpha">
+    <h1 id="motto">Sosyal medya üzerindeki kelime dağarcığınızı öğrenin</h1>
+  </div>
   <div class="grid_11">
     <br>
     <%= yield %>
   </div>
-  <div class="grid_5">
+  <div class="grid_5 alpha">
+
+    <h3>En son kimler kullanmış;</h3>
+
+    <% Profile.order("-id")[0,4].each do |profile| %>
+
+    <div class="user">
+      <div class="quote">
+
+            <% profile.get_keywords[0,10].each do |keyword| %>
+             <span><%= keyword %></span>
+            <% end %>
+
+      </div>
+      <div class="author">
+        <div class="picture omega">
+
+             <%= link_to image_tag(profile.picture), profile_path(profile) %>
+
+        </div>
+        <div class="description">
+          <%= link_to profile.username, profile_path(profile) %> <br />
+          <span><%= profile.description %></span>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    <% end %>
+
 
 
   </div>

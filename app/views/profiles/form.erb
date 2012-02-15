@@ -1,0 +1,5 @@
+<%= form_tag("/profiles", :method => "POST", :id => "search") do %>
+     <%= label_tag(:username, "Twitter kullanıcı adınızı girin, bu kadar !") %>
+     <%= text_field_tag(:username, params[:id] || "" ) %>
+     <%= submit_tag("getir", :id => "submit") %>
+<% end %>

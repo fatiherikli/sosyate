@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= render :template => 'profiles/form' %>
+
 <p>
   <b>Username:</b>
   <%= link_to @profile.username, @profile.get_twitter_url, :target => "blank" %>
