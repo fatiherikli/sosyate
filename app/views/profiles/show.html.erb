@@ -2,28 +2,23 @@
 
 <%= render :template => 'profiles/form' %>
 
-<p>
-  <b>Username:</b>
-  <%= link_to @profile.username, @profile.get_twitter_url, :target => "blank" %>
-</p>
 
-<p>
-  <b>Picture:</b>
-  <img src="<%= @profile.picture %>" />
-</p>
+<br>
 
-<p>
-  <b>Description:</b>
-  <%= @profile.description %>
-</p>
+<div class="grid_1"><img src="<%= @profile.picture %>" /></div>
+<div class="grid_5">
+  <%= link_to @profile.username, @profile.get_twitter_url, :target => "blank" %>  <br>
+   <%= @profile.description %>
+</div>
 
-<p>
-  <b>Keywords:</b>
-<ol><% @profile.get_keywords[0,10].each do |a| %>
+
+<div class="clear"></div>
+
+<ol class="keywords">
+  <% @profile.get_keywords[0,10].each do |a| %>
   <li><%= a %></li>
   <% end %>
-    </ol>
-</p>
+</ol>
 
 
-<%= link_to 'Back', '/' %>
+

@@ -31,7 +31,7 @@
 
     <h3>En son kimler kullanmış;</h3>
 
-    <% Profile.order("-id")[0,4].each do |profile| %>
+    <% Profile.where("description != ''").order("-id")[0,4].each do |profile| %>
 
     <div class="user">
       <div class="quote">
