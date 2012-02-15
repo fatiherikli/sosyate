@@ -5,11 +5,7 @@ class Profile < ActiveRecord::Base
 
   # get keywords as array
   def get_keywords
-      if keywords.nil?
-        []
-      else
-        keywords.split(",")
-      end
+      keywords.nil?? [] : keywords.split(",")
   end
 
   # twitter url
