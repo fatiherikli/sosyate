@@ -14,8 +14,8 @@ development:
   reconnect: false
   database: sosyate
   pool: 5
-  username: root
-  password: fthrkl
+  username: 
+  password: 
   host: 127.0.0.1
 
 
@@ -28,7 +28,7 @@ test:
   reconnect: false
   database: sosyate
   pool: 5
-  username: root
+  username: 
   password:
   host: localhost
 
@@ -38,6 +38,6 @@ production:
   reconnect: false
   database: sosyate
   pool: 5
-  username: root
+  username: 
   password:
   host: localhost
