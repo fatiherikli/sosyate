@@ -57,3 +57,7 @@ module Sosyate
     config.assets.version = '1.0'
   end
 end
+
+
+config.assets.precompile += ['960.css']
+
